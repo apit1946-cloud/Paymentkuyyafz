@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100d2b">
+<title>Payment Afzzz | Anime Galaxy</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+:root{--bg:#0b0920;--panel:rgba(22,18,55,.78);--pink:#ff62c7;--cyan:#65e7ff;--purple:#9b7bff;--text:#f8f5ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;overflow-x:hidden;color:var(--text);font-family:Poppins, sans-serif;background:radial-gradient(ellipse at 15% 15%,#39205e 0,transparent 36%),radial-gradient(ellipse at 90% 35%,#102f5b 0,transparent 33%),linear-gradient(145deg,#090817,#100d2b 55%,#080b1b)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.45;background-image:radial-gradient(2px 2px at 20px 30px,#fff,transparent),radial-gradient(1px 1px at 80px 110px,#8beaff,transparent),radial-gradient(2px 2px at 170px 70px,#ff9ce7,transparent),radial-gradient(1px 1px at 240px 150px,#fff,transparent);background-size:290px 210px;animation:stars 18s linear infinite}
+@keyframes stars{to{background-position:290px 210px}}
+.wrap{width:min(1080px,92%);margin:auto;position:relative;z-index:1}
+nav{display:flex;align-items:center;justify-content:space-between;padding:24px 0}
+.brand{font-family:Orbitron,sans-serif;font-weight:900;letter-spacing:2px;font-size:1.1rem}.brand span{color:var(--pink);text-shadow:0 0 18px #ff62c7}
+.pill{border:1px solid #ffffff2b;background:#ffffff0b;border-radius:99px;padding:8px 13px;font-size:.75rem;color:#d8d2ff}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:22px;padding:34px 0 42px}
+.eyebrow{color:var(--cyan);font-size:.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase}
+h1{font-family:Orbitron,sans-serif;font-size:clamp(2.5rem,7vw,5rem);line-height:1.06;margin:14px 0;background:linear-gradient(100deg,#fff 5%,#ff80d5 48%,#78eaff 90%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 38px #9c63ff26}
+.hero p{max-width:520px;color:#c9c5e5;line-height:1.8;font-size:.96rem}
+.cta{display:inline-flex;align-items:center;gap:10px;margin-top:15px;padding:13px 20px;border-radius:14px;background:linear-gradient(100deg,#ff5bc5,#8b71ff);color:white;text-decoration:none;font-weight:700;box-shadow:0 8px 30px #a64eff42;transition:.25s}
+.cta:hover{transform:translateY(-3px);box-shadow:0 12px 36px #a64eff70}
+.stage{min-height:330px;display:grid;place-items:center;position:relative}
+.orbit{position:absolute;width:min(310px,80vw);aspect-ratio:1;border:1px solid #8e7bff70;border-radius:50%;box-shadow:0 0 50px #785aff18,inset 0 0 35px #785aff12;animation:spin 22s linear infinite}
+.orbit:before,.orbit:after{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:var(--cyan);box-shadow:0 0 20px var(--cyan);top:15%;left:13%}.orbit:after{background:var(--pink);box-shadow:0 0 20px var(--pink);top:auto;left:auto;bottom:12%;right:12%}
+@keyframes spin{to{transform:rotate(360deg)}}
+.mascot{width:210px;height:265px;position:relative;animation:float 3.4s ease-in-out infinite;filter:drop-shadow(0 15px 24px #8d5bff35)}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-14px) rotate(1deg)}}
+.hair-back{position:absolute;width:145px;height:155px;top:25px;left:32px;background:linear-gradient(135deg,#30205d,#171431);border:2px solid #b8a1ff;border-radius:48% 48% 38% 38%;z-index:1}
+.face{position:absolute;z-index:2;width:112px;height:112px;top:48px;left:48px;border-radius:45% 45% 48% 48%;background:linear-gradient(145deg,#ffe0dc,#ffbfcf);border:2px solid #ffd4f0}
+.bangs{position:absolute;z-index:3;top:32px;left:39px;width:135px;height:75px;background:linear-gradient(120deg,#ff75d4,#8d68ff 70%);clip-path:polygon(0 0,100% 0,95% 65%,77% 44%,69% 100%,50% 51%,36% 92%,25% 49%,8% 75%);filter:drop-shadow(0 0 6px #ff70d8)}
+.eye{position:absolute;top:45px;width:17px;height:22px;border-radius:50%;background:#31214f;border:3px solid white;box-shadow:0 0 9px #9d78ff}.eye:after{content:"";position:absolute;top:2px;left:3px;width:5px;height:7px;background:#ff77d5;border-radius:50%}.eye.left{left:22px}.eye.right{right:22px}
+.blush{position:absolute;top:72px;width:18px;height:7px;background:#ff8ba9;border-radius:50%;opacity:.7}.blush.l{left:8px}.blush.r{right:8px}
+.mouth{position:absolute;top:78px;left:51px;width:10px;height:6px;border-bottom:2px solid #b44e7d;border-radius:50%}
+.ear{position:absolute;top:89px;width:20px;height:33px;background:#ffbecd;border:2px solid #ffd4f0;border-radius:50%;z-index:1}.ear.l{left:35px}.ear.r{right:35px}
+.body{position:absolute;z-index:2;top:145px;left:43px;width:122px;height:95px;background:linear-gradient(135deg,#8c75ff,#ff64c8);clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);border-radius:20px}
+.collar{position:absolute;z-index:4;top:143px;left:83px;width:42px;height:31px;background:#fff0ff;clip-path:polygon(0 0,50% 45%,100% 0,70% 100%,30% 100%)}
+.bow{position:absolute;z-index:4;top:157px;left:94px;width:22px;height:15px;background:#ffebff;clip-path:polygon(50% 50%,0 0,0 100%,50% 60%,100% 100%,100% 0)}
+.star{position:absolute;color:#fff;font-size:25px;animation:twinkle 2s ease-in-out infinite}.s1{top:28px;right:15px}.s2{bottom:38px;left:8px;animation-delay:.8s}.s3{top:95px;left:5px;animation-delay:1.2s}
+@keyframes twinkle{50%{opacity:.3;transform:scale(.7) rotate(25deg)}}
+.section-title{text-align:center;margin:15px 0 24px}.section-title h2{font-family:Orbitron,sans-serif;font-size:clamp(1.3rem,4vw,2rem);margin:0 0 8px}.section-title p{color:#aaa5d1;font-size:.88rem;margin:0}
+.payments{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-bottom:55px}
+.card{position:relative;overflow:hidden;padding:23px;border-radius:22px;border:1px solid #ffffff20;background:linear-gradient(145deg,#ffffff0f,#ffffff05);backdrop-filter:blur(14px);box-shadow:0 15px 40px #00000020;transition:.28s}
+.card:before{content:"";position:absolute;top:-70px;right:-65px;width:140px;height:140px;border-radius:50%;background:var(--glow,#a879ff);filter:blur(65px);opacity:.32}
+.card:hover{transform:translateY(-6px);border-color:#b9a1ff8a}
+.payhead{display:flex;align-items:center;gap:12px;margin-bottom:18px;position:relative}.logo{width:45px;height:45px;border-radius:14px;display:grid;place-items:center;font-size:1.1rem;font-weight:900;color:#fff;background:linear-gradient(135deg,#4e82ff,#8f70ff);box-shadow:0 5px 20px #6c6aff35}
+.dana .logo{background:linear-gradient(135deg,#087dff,#44baff)}.gopay .logo{background:linear-gradient(135deg,#00a86b,#6be3a3)}.qris .logo{background:linear-gradient(135deg,#ff5bba,#9d69ff)}
+.payhead h3{margin:0;font-size:1.05rem}.payhead small{color:#aaa5d1}
+.number{font-size:.9rem;letter-spacing:.5px;padding:12px 10px;border:1px solid #ffffff16;background:#09081770;border-radius:11px;margin-bottom:14px;position:relative;word-break:break-word}
+.action{width:100%;border:0;border-radius:12px;padding:12px 14px;font:600 .9rem Poppins,sans-serif;color:white;cursor:pointer;background:linear-gradient(100deg,#8c6cff,#e05fc9);transition:.2s;position:relative}
+.action:hover{filter:brightness(1.13);transform:scale(1.015)}
+.qrimg{width:100%;height:145px;object-fit:contain;background:#fff;border-radius:12px;padding:8px;margin-bottom:14px;position:relative}
+.note{text-align:center;color:#a9a3d2;font-size:.8rem;line-height:1.7;margin:-25px auto 45px}
+footer{text-align:center;border-top:1px solid #ffffff16;padding:22px 0 30px;color:#9a94c4;font-size:.78rem}
+footer b{color:#ff82d7}
+.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);padding:12px 18px;border-radius:12px;background:#f7f0ff;color:#21133b;font-weight:700;font-size:.85rem;opacity:0;pointer-events:none;transition:.25s;z-index:10;box-shadow:0 10px 35px #0006}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:760px){.hero{grid-template-columns:1fr;text-align:center;padding-top:20px}.hero p{margin:0 auto}.stage{min-height:300px;grid-row:1}.mascot{transform:scale(.92);animation:float 3.4s ease-in-out infinite}.payments{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}.card{padding:21px}.eyebrow{letter-spacing:2px}nav{padding-top:18px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <div class="brand">PAYMENT<span> AFZZZ</span></div>
+    <div class="pill">✦ ANIME GALAXY ✦</div>
+  </nav>
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">✦ fast • simple • secure ✦</div>
+        <h1>PAYMENT<br>AFZZZ</h1>
+        <p>Welcome to Afzzz's universe! Pilih metode pembayaran favoritmu, lalu salin nomor atau buka QRIS dengan satu sentuhan.</p>
+        <a class="cta" href="#payment">Pilih Payment <span>↘</span></a>
+      </div>
+      <div class="stage" aria-label="Karakter anime bergaya chibi yang melayang">
+        <div class="orbit"></div>
+        <span class="star s1">✦</span><span class="star s2">✧</span><span class="star s3">✦</span>
+        <div class="mascot">
+          <div class="hair-back"></div><div class="ear l"></div><div class="ear r"></div>
+          <div class="face"><div class="eye left"></div><div class="eye right"></div><div class="blush l"></div><div class="blush r"></div><div class="mouth"></div></div>
+          <div class="bangs"></div><div class="body"></div><div class="collar"></div><div class="bow"></div>
+        </div>
+      </div>
+    </section>
+    <section id="payment">
+      <div class="section-title"><h2>Choose Your Payment</h2><p>Tap tombol untuk menyalin nomor pembayaran ✨</p></div>
+      <div class="payments">
+        <article class="card dana" style="--glow:#168aff">
+          <div class="payhead"><div class="logo">D</div><div><h3>DANA</h3><small>Digital wallet</small></div></div>
+          <div class="number" id="dana-number">082338325478</div>
+          <button class="action" onclick="copyPayment('082338325478','Nomor DANA berhasil disalin!')">▣ Salin Nomor DANA</button>
+        </article>
+        <article class="card gopay" style="--glow:#23d18b">
+          <div class="payhead"><div class="logo">G</div><div><h3>GoPay</h3><small>Digital wallet</small></div></div>
+          <div class="number" id="gopay-number">085934216414</div>
+          <button class="action" onclick="copyPayment('085934216414','Nomor GoPay berhasil disalin!')">▣ Salin Nomor GoPay</button>
+        </article>
+        <article class="card qris" style="--glow:#ff62c7">
+          <div class="payhead"><div class="logo">QR</div><div><h3>QRIS</h3><small>Scan to pay</small></div></div>
+          <img class="qrimg" src="https://files.catbox.moe/om0v0n.jpg" alt="QRIS pembayaran Afzzz" loading="lazy">
+          <button class="action" onclick="window.open('https://files.catbox.moe/om0v0n.jpg','_blank','noopener')">▧ Buka QRIS</button>
+        </article>
+      </div>
+      <p class="note">Pastikan nama penerima dan nominal sudah benar sebelum mengirim pembayaran.<br>Terima kasih sudah support <b>Afzzz</b> ♡</p>
+    </section>
+  </main>
+  <footer>Made with ✦ for <b>AFZZZ</b> · Anime Galaxy Payment</footer>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+let toastTimer;
+function showToast(message){
+  const toast=document.getElementById('toast');
+  toast.textContent=message;toast.classList.add('show');
+  clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2400);
+}
+async function copyPayment(value,message){
+  try{
+    if(navigator.clipboard && window.isSecureContext){await navigator.clipboard.writeText(value);}
+    else{
+      const input=document.createElement('textarea');input.value=value;input.style.position='fixed';input.style.opacity='0';
+      document.body.appendChild(input);input.select();
+      const copied=document.execCommand('copy');input.remove();
+      if(!copied) throw new Error('copy failed');
+    }
+    showToast(message);
+  }catch(e){showToast('Salin manual nomor: '+value);}
+}
+</script>
+</body>
+</html>
